@@ -5,6 +5,22 @@ function ShortenCards({ url, index, deleteURL }) {
   const [copied, setCopied] = useState(false);
   useEffect(() => {
     setCopied(false);
+    const urlApi = "https://api.shrtco.de/v2/";
+    const options = {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        url: "https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html",
+      }),
+    };
+
+    fetch(urlApi, options)
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.error("error:" + err));
   }, [url]);
 
   function deleteCard() {
