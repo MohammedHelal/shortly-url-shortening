@@ -9,7 +9,7 @@ function ShortenCards({ url, index, deleteURL }) {
     const options = {
       method: "POST",
       body: JSON.stringify({
-        url: "https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html",
+        url: "https://docs.docker.com/desktop/install/windows-install/#install-interactively",
       }),
     };
 
