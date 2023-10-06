@@ -13,6 +13,7 @@
   margin-top: 0;
   margin-bottom: 20px;
 }
+
 .statistics > p {
   margin: 0 20vw;
 }
@@ -68,4 +69,41 @@
   bottom: 225px;
   left: 300px;
   z-index: 3;
+}
+
+@media screen and (max-width: 500px) {
+  .statistics > p {
+    margin: 0 10px;
+  }
+
+  .statistics > div {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card > img {
+    left: calc(50% - 40px);
+    top: -40px;
+    width: 80px;
+    margin-top: 10px;
+  }
+
+  .card:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    margin-top: 80px;
+  }
+
+  .line {
+    transform: rotate(90deg);
+    left: calc(50% - 90vw);
+    width: 180vw;
+    bottom: 500px;
+  }
 }

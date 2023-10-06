@@ -93,7 +93,29 @@ header {
 
 @media screen and (max-width: 500px) {
   .header-flex {
-    display: block;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .landing-image {
+    order: 1;
+    width: 160%;
+    margin-left: 50%;
+  }
+
+  .title {
+    order: 2;
+  }
+
+  .title > p {
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+
+  .button {
+    margin: 0 auto;
+    position: relative;
+    left: calc(50% - 76px);
   }
 
   .navbar {

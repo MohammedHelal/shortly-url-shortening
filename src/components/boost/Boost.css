@@ -18,3 +18,19 @@
   margin-right: 45vw;
   margin-left: 45vw;
 }
+
+@media screen and (max-width: 500px) {
+  .boost {
+    padding: 20px 5px;
+    background-image: url("../images/bg-boost-mobile.svg");
+  }
+
+  .boost > h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .boost > button {
+    margin: 20px auto;
+  }
+}
