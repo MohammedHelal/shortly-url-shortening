@@ -56,7 +56,8 @@ function Footer() {
         >
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Mohammed Omar Helal</a>.
+        . Coded by{" "}
+        <a href="https://github.com/MohammedHelal/">Mohammed Omar Helal</a>.
       </p>
     </footer>
   );

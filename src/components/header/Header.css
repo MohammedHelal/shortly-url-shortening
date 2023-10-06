@@ -112,7 +112,7 @@ header {
     margin-right: 0;
   }
 
-  .button {
+  .title > button {
     margin: 0 auto;
     position: relative;
     left: calc(50% - 76px);

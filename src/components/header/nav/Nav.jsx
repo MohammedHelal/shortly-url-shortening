@@ -30,7 +30,7 @@ function Nav() {
         <li className="nav-links">Pricing</li>
         <li className="nav-links">Resources</li>
         <li className="right nav-links">Login</li>
-        <li className="button">Sign Up</li>
+        <li className="button sign-up">Sign Up</li>
       </ul>
     </div>
   );
