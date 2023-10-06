@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-function ShortenCards({ url, index, deleteURL }) {
+function ShortenCards({ urlVal, index, deleteURL }) {
   const [copied, setCopied] = useState(false);
   useEffect(() => {
     setCopied(false);
@@ -17,7 +17,7 @@ function ShortenCards({ url, index, deleteURL }) {
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => console.error("error:" + err));
-  }, [url]);
+  }, [urlVal]);
 
   function deleteCard() {
     deleteURL(index);
@@ -25,7 +25,7 @@ function ShortenCards({ url, index, deleteURL }) {
 
   function copyCard() {
     if (!copied) {
-      navigator.clipboard.writeText(url);
+      navigator.clipboard.writeText(urlVal);
       setCopied(true);
     } else setCopied(false);
   }
@@ -33,7 +33,7 @@ function ShortenCards({ url, index, deleteURL }) {
   let copyClasses = copied ? "copied-button" : "copy-button";
   return (
     <div className="shorten-cards">
-      <p>{url}</p>
+      <p>{urlVal}</p>
       <div>
         <a>{}</a>
         <button className={copyClasses} onClick={copyCard}>
@@ -48,7 +48,7 @@ function ShortenCards({ url, index, deleteURL }) {
 }
 
 ShortenCards.propTypes = {
-  url: PropTypes.string,
+  urlVal: PropTypes.string,
   index: PropTypes.number,
   deleteURL: PropTypes.func,
 };

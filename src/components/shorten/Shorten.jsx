@@ -19,7 +19,7 @@ function Shorten() {
       <ShortenForm sendUrl={geturl} />
       {urlArray.length > 0 &&
         urlArray.map((ele, i) => (
-          <ShortenCards key={i} index={i} url={ele} deleteURL={deleteURL} />
+          <ShortenCards key={i} index={i} urlVal={ele} deleteURL={deleteURL} />
         ))}
     </section>
   );
