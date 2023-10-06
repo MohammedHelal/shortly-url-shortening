@@ -2,13 +2,18 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 function ShortenCards({ urlVal, index, deleteURL }) {
+  const [shortUrl, setShortUrl] = useState("");
   const [copied, setCopied] = useState(false);
   useEffect(() => {
     setCopied(false);
 
     fetch(`https://api.shrtco.de/v2/shorten?url=${urlVal}`)
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        setShortUrl(data.result["full_short_link"]);
+        console.log(data.result["full_short_link"]);
+        console.log(data);
+      })
       .catch((err) => console.error("error:" + err));
   }, [urlVal]);
 
@@ -28,7 +33,9 @@ function ShortenCards({ urlVal, index, deleteURL }) {
     <div className="shorten-cards">
       <p>{urlVal}</p>
       <div>
-        <a>{}</a>
+        <div>
+          <a className="short-link">{shortUrl}</a>
+        </div>
         <button className={copyClasses} onClick={copyCard}>
           {!copied ? "Copy" : "Copied!"}
         </button>

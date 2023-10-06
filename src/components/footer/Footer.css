@@ -101,6 +101,10 @@ footer {
     flex-direction: column;
   }
 
+  .footer-flex > div > div {
+    font-size: 0.8em;
+  }
+
   .list-item {
     text-align: center;
   }
