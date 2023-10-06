@@ -5,15 +5,8 @@ function ShortenCards({ urlVal, index, deleteURL }) {
   const [copied, setCopied] = useState(false);
   useEffect(() => {
     setCopied(false);
-    const urlApi = "https://api.shrtco.de/v2/shorten";
-    const options = {
-      method: "POST",
-      body: JSON.stringify({
-        url: "https://docs.docker.com/desktop/install/windows-install/#install-interactively",
-      }),
-    };
 
-    fetch(urlApi, options)
+    fetch(`https://api.shrtco.de/v2/shorten?url=${urlVal}`)
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => console.error("error:" + err));
