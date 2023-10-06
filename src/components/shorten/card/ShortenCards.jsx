@@ -5,7 +5,7 @@ function ShortenCards({ url, index, deleteURL }) {
   const [copied, setCopied] = useState(false);
   useEffect(() => {
     setCopied(false);
-    const urlApi = "https://api.shrtco.de/v2/";
+    const urlApi = "https://api.shrtco.de/v2/shorten";
     const options = {
       method: "POST",
       headers: {
