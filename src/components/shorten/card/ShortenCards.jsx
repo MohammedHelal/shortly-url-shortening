@@ -8,10 +8,6 @@ function ShortenCards({ url, index, deleteURL }) {
     const urlApi = "https://api.shrtco.de/v2/shorten";
     const options = {
       method: "POST",
-      headers: {
-        accept: "application/json",
-        "content-type": "application/json",
-      },
       body: JSON.stringify({
         url: "https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html",
       }),
