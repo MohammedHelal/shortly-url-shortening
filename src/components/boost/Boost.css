@@ -1,0 +1,20 @@
+.boost {
+  width: 100vw;
+  background-image: url("../images/bg-boost-desktop.svg");
+  background-color: var(--color-dark-violet);
+  background-size: 100% 100%;
+  padding: 80px 0;
+}
+
+.boost > h3 {
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.boost > button {
+  margin-top: 20px;
+  margin-right: 45vw;
+  margin-left: 45vw;
+}

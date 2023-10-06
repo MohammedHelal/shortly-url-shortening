@@ -1,0 +1,141 @@
+.shorten {
+  margin-top: 150px;
+  background-color: var(--color-light-gray);
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+}
+
+.shorten > * {
+  margin: 0 10vw;
+}
+
+.short-form {
+  display: flex;
+  align-items: flex-start;
+  padding: 50px;
+  width: 80%;
+  border-radius: 10px;
+  background-image: url("../images/bg-shorten-desktop.svg");
+  background-color: var(--color-dark-violet);
+  background-size: cover;
+  position: absolute;
+  top: -85px;
+  height: 170px;
+}
+
+.short-form > div {
+  width: 80%;
+  margin-right: 20px;
+}
+
+.url-input {
+  padding: 20px;
+  font-size: 1em;
+  width: 100%;
+  border-radius: 10px;
+  border: 0;
+}
+
+.url-input:focus {
+  outline: 5px solid var(--color-very-dark-violet);
+}
+
+.url-input::placeholder {
+  font-size: 1.2em;
+}
+
+.error-input {
+  outline: 5px solid var(--color-red);
+}
+
+.submit-button {
+  background-color: var(--color-cyan);
+  border: 0;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1em;
+  color: white;
+  width: 200px;
+}
+
+.submit-button:hover {
+  background-color: hsl(180, 66%, 60%);
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--color-red);
+  font-style: italic;
+}
+
+.shorten-cards {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+  width: 80%;
+  border-radius: 10px;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.shorten-cards > p {
+  color: black;
+  font-weight: 700;
+}
+
+.shorten-cards > div > button {
+  margin-left: 20px;
+  padding: 10px 20px;
+}
+
+.copy-button {
+  background-color: var(--color-cyan);
+  border: 0;
+  border-radius: 10px;
+  font-size: 1em;
+  color: white;
+  width: 100px;
+}
+
+.copy-button:hover {
+  background-color: hsl(180, 66%, 60%);
+  cursor: pointer;
+}
+
+.copied-button {
+  background-color: Black;
+  border: 0;
+  border-radius: 10px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+}
+
+.copied-button:hover {
+  background-color: var(--color-very-dark-blue);
+}
+
+.shorten-cards > div > a {
+  color: var(--color-cyan);
+  font-weight: 700;
+}
+
+.close-button {
+  background-color: var(--color-red);
+  border: 0;
+  border-radius: 10px;
+  font-size: 1em;
+  color: white;
+}
+
+.close-button:hover {
+  background-color: hsl(0, 87%, 40%);
+  cursor: pointer;
+}
